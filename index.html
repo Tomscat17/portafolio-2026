@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Catalán | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="glitch-text">TOMÁS CATALÁN</h1>
+            <p class="subtitle">Fullstack Dev | Godot Engine | Linux Tinkerer</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Desliza para desplegar</span>
+            <div class="arrow">↓</div>
+        </div>
+    </header>
+
+    <section class="stack-section" id="stack">
+        <h2 class="section-title">HABILIDADES</h2>
+        
+        <div class="tech-grid">
+            <div class="tech-card">Python</div>
+            <div class="tech-card">JavaScript</div>
+            <div class="tech-card">PHP</div>
+            <div class="tech-card">Kotlin</div>
+
+            <div class="tech-card">Django</div>
+            <div class="tech-card">Laravel</div>
+            <div class="tech-card">React Native</div>
+            <div class="tech-card">Flask</div>
+            
+            <div class="tech-card">Godot 4</div>
+            <div class="tech-card">Linux</div>
+            <div class="tech-card">PostgreSQL</div>
+            <div class="tech-card">Firebase</div>
+        </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+        <h2 class="section-title">PROYECTOS DESTACADOS</h2>
+        
+        <article class="project-card">
+            
+            <div class="card-header">
+                <div class="header-left">
+                    <h3>Agenda Inteligente</h3>
+                    <span class="project-year">2025</span>
+                </div>
+                <div class="tech-stack-mini">
+                    <span>React Native</span> • <span>Firebase</span>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="visual-column">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="screen-slider">
+                            <img src="./assets/img/dashboard.png" class="slide-img" alt="Dashboard">
+                            <img src="./assets/img/calendario.png" class="slide-img" alt="Calendario">
+                            <img src="./assets/img/notas.png" class="slide-img" alt="Notas">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-column">
+                    <p class="pitch">
+                        "Enfocada en los estudiantes que sufren por la desorganizacion academica y sus consecuencias."
+                    </p>
+                    <div class="problem-solution">
+                        <div class="item">
+                            <span class="icon">⛔</span> <p><strong>Problema:</strong> Solo organización mental y desorden.</p>
+                        </div>
+                        <div class="item">
+                            <span class="icon">✅</span> <p><strong>Solución:</strong> Notificaciones inteligentes y Horario Cloud.</p>
+                        </div>
+                    </div>
+                    <div class="metrics">
+                        <div class="metric-box"><span class="num">100%</span><span class="label">Offline</span></div>
+                        <div class="metric-box"><span class="num">2s</span><span class="label">Carga</span></div>
+                    </div>
+                    <div class="cta-buttons">
+                        <div class="btn disabled">🔒 Repositorio Privado</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            
+            <div class="card-header">
+                <div class="header-left">
+                    <h3>Automatización de Obras</h3>
+                    <span class="project-company">Cliente: Ing. El Alba</span>
+                </div>
+                <div class="tech-stack-mini">
+                    JS • ExcelJS • Bootstrap
+                </div>
+            </div>
+
+            <div class="view-toggle">
+                <button class="toggle-btn active" onclick="toggleProject2('app')">📱 El Ingreso (App)</button>
+                <button class="toggle-btn" onclick="toggleProject2('excel')">📄 El Resultado (Excel)</button>
+            </div>
+
+            <div class="card-body">
+                <div class="media-display">
+                    <img src="./assets/img/monografia_app.jpg" class="toggle-img active" id="p2-img-app" alt="App Web">
+                    <img src="./assets/img/monografia_excel.jpg" class="toggle-img" id="p2-img-excel" alt="Excel Generado">
+                </div>
+
+                <div class="info-column">
+                    <p class="pitch">
+                        "Automaticé los reportes manuales de las obras reduciendo el tiempo en un 80%."
+                    </p>
+                    <div class="problem-solution">
+                        <div class="item">
+                            <span>🔥</span> <strong>Problema:</strong> Ingreso manual de cada proyecto, haciendo este proceso mas lento.
+                        </div>
+                        <div class="item">
+                            <span>💡</span> <strong>Solución:</strong> Inyección de datos en plantillas .xlsx reales.
+                        </div>
+                    </div>
+                    <div class="metrics">
+                        <div class="metric-box"><span class="num">-80%</span><span class="label">Tiempo</span></div>
+                        <div class="metric-box"><span class="num">0</span><span class="label">Errores</span></div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="https://tomscat17.github.io/monografia-web/" class="btn primary">Ver Demo</a>
+                        <a href="https://github.com/Tomscat17/monografia-web" class="btn ghost">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            
+            <div class="card-header">
+                <div class="header-left">
+                    <h3>Cornageddon</h3>
+                    <span class="project-company">Arcade Shooter 2D</span>
+                </div>
+                <div class="tech-stack-mini">
+                    Godot 4 • GDScript • FSM Logic
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="game-display">
+                    <video class="game-video" autoplay loop muted playsinline poster="./assets/img/cornageddon_poster.png">
+                        <source src="./assets/img/cornageddon.mp4" type="video/mp4">
+                        Tu navegador no soporta video.
+                    </video>
+                    
+                    <div class="scanlines"></div>
+                </div>
+
+                <div class="info-column">
+                    <p class="pitch">
+                        "Un Bullet Hell diseñado para ser 'Juicy'. Gestión de memoria optimizada y patrones de IA basados en vectores."
+                    </p>
+                    
+                    <div class="problem-solution">
+                        <div class="item">
+                            <span>🧠</span> <strong>Lógica:</strong> Jefe final con Máquina de Estados Finitos (FSM) de 3 fases.
+                        </div>
+                        <div class="item">
+                            <span>✨</span> <strong>Game Feel:</strong> Sistema de partículas (GPU) y feedback visual de impacto.
+                        </div>
+                    </div>
+
+                    <div class="metrics">
+                        <div class="metric-box">
+                            <span class="num">60</span>
+                            <span class="label">FPS Estables</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="num">OOP</span>
+                            <span class="label">Signals</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="num">Math</span>
+                            <span class="label">Vectores</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <div class="btn disabled">🔒 Repositorio Privado</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            
+            <div class="card-header">
+                <div class="header-left">
+                    <h3>Fintrack SaaS</h3>
+                    <span class="project-company">Finanzas Inteligentes</span>
+                </div>
+                <div class="tech-stack-mini">
+                    Python • Flask • PostgreSQL • Chart.js
+                </div>
+            </div>
+
+            <div class="view-toggle">
+                <button class="toggle-btn active" onclick="toggleProject4('dash')">📊 Dashboard</button>
+                <button class="toggle-btn" onclick="toggleProject4('report')">📈 Reportes</button>
+            </div>
+
+            <div class="card-body">
+                <div class="media-display">
+                    <img src="./assets/img/fintrack_dashboard.jpg" class="toggle-img active" id="p4-img-dash" alt="Dashboard Financiero">
+                    <img src="./assets/img/fintrack_reports.jpg" class="toggle-img" id="p4-img-report" alt="Análisis de Gastos">
+                </div>
+
+                <div class="info-column">
+                    <p class="pitch">
+                        "Plataforma SaaS multi-usuario que reemplaza el caos de Excel con inteligencia financiera en tiempo real y seguridad bancaria."
+                    </p>
+                    
+                    <div class="problem-solution">
+                        <div class="item">
+                            <span>📉</span> <strong>Problema:</strong> Finanzas personales manuales, inseguras y sin análisis.
+                        </div>
+                        <div class="item">
+                            <span>🔒</span> <strong>Solución:</strong> Arquitectura Cloud (Render) con encriptación Bcrypt y alertas de presupuesto.
+                        </div>
+                    </div>
+
+                    <div class="metrics">
+                        <div class="metric-box">
+                            <span class="num">SaaS</span>
+                            <span class="label">Multi-User</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="num">SQL</span>
+                            <span class="label">Postgres</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="num">Sec</span>
+                            <span class="label">Bcrypt</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <div class="btn disabled" style="border-color: #4CAF50; color: #4CAF50;">🚀 Próximo Lanzamiento</div>
+                        <div class="btn disabled">🔒 Código Propietario</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            
+            <div class="card-header">
+                <div class="header-left">
+                    <h3>Erizos: Virtual Pet</h3>
+                    <span class="project-company">Motor Propio en JS</span>
+                </div>
+                <div class="tech-stack-mini">
+                    Vanilla JS • Canvas API • Pixel Art Original
+                </div>
+            </div>
+
+            <div class="view-toggle">
+                <button class="toggle-btn active" onclick="toggleProject5('pet')">🏠 Tamagotchi</button>
+                <button class="toggle-btn" onclick="toggleProject5('game')">🎮 Minijuego</button>
+            </div>
+
+            <div class="card-body">
+                <div class="media-display">
+                    <img src="./assets/img/erizos_pet.jpg" class="toggle-img active" id="p5-img-pet" alt="Vista Mascota">
+                    <img src="./assets/img/erizos_game.jpg" class="toggle-img" id="p5-img-game" alt="Plataformas Procedural">
+                </div>
+
+                <div class="info-column">
+                    <p class="pitch">
+                        "Un motor de videojuegos construido desde cero usando matemáticas y JavaScript puro en el navegador."
+                    </p>
+                    
+                    <div class="problem-solution">
+                        <div class="item">
+                            <span>🎨</span> <strong>Diseño:</strong> Sprites y animaciones Pixel Art creadas a mano.
+                        </div>
+                        <div class="item">
+                            <span>⚙️</span> <strong>Ingeniería:</strong> Game Loop personalizado, gestión de estados y generación procedural de niveles.
+                        </div>
+                    </div>
+
+                    <div class="metrics">
+                        <div class="metric-box">
+                            <span class="num">0%</span>
+                            <span class="label">Dependencias</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="num">Canvas</span>
+                            <span class="label">Render</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="num">∞</span>
+                            <span class="label">Nivel Infinito</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="https://clinquant-fairy-f4deb0.netlify.app" class="btn primary" target="_blank">Jugar Ahora</a>
+                        <div class="btn disabled">🔒 Código Privado</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <footer class="contact-section">
+        <h2 class="section-title">CONTACTO</h2>
+        <p class="contact-text">
+            Disponible para proyectos freelance 🦟.
+        </p>
+
+        <div class="social-links">
+            
+            <a href="https://github.com/Tomscat17" target="_blank" class="social-btn github">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://instagram.com/tomasswp" target="_blank" class="social-btn instagram">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram</span>
+            </a>
+
+            <a href="mailto:tomas_catalan.01@hotmail.com" class="social-btn outlook">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.004 7.653l-10.422-6.94c-.352-.234-.812-.234-1.164 0l-10.422 6.94c-.652.434-1.045 1.156-1.045 1.94v9.907c0 1.381 1.119 2.5 2.5 2.5h19.198c1.381 0 2.5-1.119 2.5-2.5v-9.907c0-.784-.393-1.506-1.045-1.94zm-11.004-4.82l9.262 6.168-9.262 6.551-9.262-6.551 9.262-6.168zm-9.599 7.822l8.742 6.182c.256.182.568.273.88.273s.624-.091.88-.273l8.742-6.182v8.647h-19.244v-8.647z"/>
+                </svg>
+                <span>Email</span>
+            </a>
+        </div>
+
+        <div class="footer-copy">
+            <p>© 2026 Tomás Catalán</p>
+            <p style="font-size: 0.7rem; color: #555;">Hecho con HTML, CSS y JS</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
